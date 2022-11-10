@@ -20,6 +20,7 @@ function copyFiles(src, dest) {
         if (err2) {
           console.log(err2.message);
         }
+        destFiles = destFiles || [];
         // deleting files that are not relevant
         destFiles.filter((file) => !srcFiles.includes(file))
           .forEach((file) => deleteFile(path.join(dest, file)));
